@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<title>Table</title>
+<link rel="stylesheet" href="css/table.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.."></script>
+
+</head>
+<body>
+    <div class "wrapper">
+        <header class="header">
+            <div class = "header__container _container">
+           <a href="index.html" class="header__logo">
+               Inflex
+           </a>
+           <nav class="header__menu menu">
+               <ul class="menu__list">
+                   <li class="menu__item">
+                       <a href="index.html" class="menu__link">Home</a>
+                   </li>
+                   <li class="menu__item">
+                       <a href="table.html" class="menu__link">Table</a>
+                   </li>
+                   <li class="menu__item">
+                       <a href="about.html" class="menu__link">About</a>
+                   </li>
+               </ul>
+           </nav>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__main-block main-block"> 
+                <div class="main-block__container _container">
+                    <div class="main-block__body">
+                    <h1 class="main-block__title">
+                        Table with data and at the same time
+                        provide the ability
+                    </h1>
+                    <div class="main-block__text">
+                      <a href="tel:+375292303825">
+                          +375(29)2303825 [MTC]
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-block__image _ibg">
+                    <img src="img-about/cover.jpg" alt="cover">
+                </div>
+            </div>
+            <div class="table">
+                <table class="table__background" id="table__background">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <div class="Form__for__table">
+                <p class="name__form">Choose Table color</p>
+                <form id="form">
+                <input type="radio" name="color" id="color1" value="green">
+                <label for="green">Grey</label>
+                
+                <input type="radio" name="color" id="color2" value="red" checked>
+                <label for="red">Pink</label>
+                
+                <input type="radio" name="color" id="color3" value="yellow">
+                <label for="red">Brown</label>
+                <input type="button" id="btn" value="Submit" onClick="onClick()">
+                </form>
+                </div>
+            <script>
+            const button = document.getElementById('btn');
+            let radio_color = document.getElementById('form').value;
+            let radio__background = document.getElementById('table__background');
+            function onClick(){
+            if (document.getElementById('color1').checked) {
+            radio__background.style.backgroundColor = 'Grey';
+            }
+            else if(document.getElementById('color2').checked)
+            {
+            radio__background.style.backgroundColor = 'Pink';
+            }
+            else if(document.getElementById('color3').checked)
+            {
+            radio__background.style.backgroundColor = 'brown';
+            }
+            }
+            </script>
+            </main>
+        <footer class="footer">
+            <div class="footer__body">
+             <div class="footer__column">
+                 <div class="item-footer__content">
+                     <div class="item-footer__title"> The current date </div>
+                     <div class="item-footer__text">
+                        <div class="vevent">
+                            <span class="summary">Inflex Conference 1.0b<br></span>
+                             <abbr class="dtstart" title="2021-10-13"><script>
+                                document.write(Date());
+                            </script></abbr>
+                            </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="footer__column">
+               <div class="item-footer__content">
+                   <div class="item-footer__title"> Information about the completed task </div>
+                   <div class="item-footer__text">
+                    Made by <div class="fn">Zalenskiy</div><span class ="given-name">Stepan</span> student of GGTU<br><span class="nickname">Stepan47</span> 
+                   </div>
+               </div>
+           </div>
+           <div class="footer__column">
+               <div class="item-footer__content">
+                   <div class="item-footer__title"> Site version </div>
+                   <div class="item-footer__text">
+                      Version-Site 1.0b
+                   </div>
+               </div>
+           </div>
+           </div>
+        </footer>
+       </div>
+
+</body>
+</html>
