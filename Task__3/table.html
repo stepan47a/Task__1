@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Table</title>
+    <link rel="stylesheet" href="css/table.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.."></script>
+</head>
+<body vocab="http://purl.org/dc/terms/">
+     <!--Whole page block-->
+    <div class "wrapper">
+        <header class="header" property="title" href="#header"> 
+            <div class = "header__container _container" resource="#header">
+               <a property = "url" href="index.html" class="header__logo" >
+                   <span class="header__name" property="name__logo">Inflex</span>
+               </a>
+           <!--NAVIGATION MENU-->
+           <nav class="header__menu menu">
+               <ul class="menu__list">
+                   <li class="menu__item">
+                       <a property="url" href="index.html" class="menu__link">Home</a>
+                   </li>
+                   <li class="menu__item">
+                       <a property="url" href="table.html" class="menu__link">Table</a>
+                   </li>
+                   <li class="menu__item">
+                       <a property="url" href="about.html" class="menu__link">About</a>
+                   </li>
+               </ul>
+           </nav>
+       
+            </div>
+        </header>
+         <!--main is for main content-->
+        <main class="page" property="title" href="#main__block" vocab="http://purl.org/dc/terms/">
+            <div class="page__main-block main-block"resource="#main__block"> 
+                <div class="main-block__container _container">
+                    <div class="main-block__body">
+                    <h1 class="main-block__title" property="title">
+                        Table with data and at the same time
+                        provide the ability
+                    </h1>
+                    <div class="main-block__text" property="tel">
+                      <a href="tel:+375292303825">
+                          +375(29)2303825 [MTC]
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-block__image _ibg">
+                    <img rel="foaf:depiction" src="img-about/cover.jpg" alt="cover">
+                </div>
+            </div>
+            <div class="table" property="title" href="#table" vocab="http://purl.org/dc/terms/">
+                <table class="table__background" id="table__background" resource="#table">
+                    <div class ="table__text">
+                <thead>
+                    <tr property="text__table__1">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr property="text__table__2">
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr property="text__table__3">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr property="text__table__4">
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr property="text__table__5">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr property="text__table__6">
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr property="text__table__7">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ZIP</th>
+                        <th>Birthday</th>
+                        <th>Points</th>
+                        <th>Average</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr property="text__table__8">
+                        <td>Gloria</td>
+                        <td>Reeves</td>
+                        <td>67439</td>
+                        <td>10/18/1985</td>
+                        <td>4</td>
+                        <td>0.1</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+            </div>
+            </table>
+            </div>
+            <div class="Form__for__table" property="title" href="#form" vocab="http://purl.org/dc/terms/">
+                <p class="name__form">Choose Table color</p>
+                <form id="form" resource="#form">
+                <input type="radio" name="color" id="color1" value="green" property="input__1">
+                <label for="green" property="color__1">Green</label>
+                
+                <input type="radio" name="color" id="color2" value="red" checked property="input__2">
+                <label for="red" property="color__2">Red</label>
+                
+                <input type="radio" name="color" id="color3" value="yellow" property="input__3">
+                <label for="Yellow" property="color__3">Yellow</label>
+                <input type="button" id="btn" value="Submit" onClick="onClick()">
+                </form>
+                </div>
+            <script>
+            const button = document.getElementById('btn');
+            let radio_color = document.getElementById('form').value;
+            let radio__background = document.getElementById('table__background');
+            function onClick(){
+            if (document.getElementById('color1').checked) {
+            radio__background.style.backgroundColor = 'Green';
+            }
+            else if(document.getElementById('color2').checked)
+            {
+            radio__background.style.backgroundColor = 'Red';
+            }
+            else if(document.getElementById('color3').checked)
+            {
+            radio__background.style.backgroundColor = 'Yellow';
+            }
+            }
+            </script>
+            </main>
+              <!--footer is the footer of the web page-->
+              <footer class="footer" property="title" href="#footer" vocab="http://purl.org/dc/terms/">
+                <div class="footer__body" resource="#footer">
+                 <div class="footer__column">
+                     <div class="item-footer__content">
+                         <div class="item-footer__title"> The current date </div>
+                         <div class="item-footer__text">
+                            <div class="vevent">
+                                <span class="summary" property="conference__info">Inflex Conference 1.1g<br></span>
+                                 <abbr class="dtstart" title="2021-10-13">
+                                     <div class="date" property="date">
+                                     <script>
+                                    document.write(Date());
+                                </script>
+                                </div>
+                                </abbr>
+                                </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="footer__column">
+                   <div class="item-footer__content">
+                       <div class="item-footer__title" property="title"> Information about the completed task </div>
+                       <div class="item-footer__text" property="text">
+                        Made by <div class="fn" property="fn">Zalenskiy</div><span class ="nickname" property="nickname">Stepan</span> student of GGTU<br>
+                       </div>
+                   </div>
+               </div>
+               <div class="footer__column">
+                   <div class="item-footer__content">
+                       <div class="item-footer__title" property="title-version"> Site version </div>
+                       <div class="item-footer__text" property="text-version-site">
+                          Version-Site 1.1g
+                       </div>
+                   </div>
+               </div>
+               </div>
+            </footer>
+        </div>
+            </div>
+        </body>
+        </html>>
+                  
