@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body{
+          background-color: rgb(44, 41, 35);
+          user-select: none;
+      }
+      .container{
+          position: relative;
+          left:33%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap:4px;
+          background-color: rgb(255, 196, 0);
+          padding: 4px;
+          border-radius: 3px solid yellow;
+          max-width: 355px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .item-container{
+          background-color: rgb(6, 211, 143);
+          color:black;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 22px;
+          cursor: pointer;
+          font-weight: bold;
+      }
+      form{
+        max-width: 100%;
+      }
+      input{
+          width:100%;
+          height: 60px;
+          border:none;
+          font-size: 30px;
+          outline:none;
+          text-align: right;
+      }
+      .input{
+          grid-column: 1/-1;
+          padding: 0px;
+      }
+      .clean{
+          grid-column: 1/3;
+          background-color:rgb(64, 255, 47);
+      }
+      .back{
+          grid-column: 3/-1;
+          background-color:rgb(64, 255, 47);
+      }
+      .equal{
+          grid-column: 4;
+          grid-row: 6/8;
+          background-color:rgb(21, 255, 0);
+      }
+      .zero{
+          grid-column: 1/3;
+      }
+    </style>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item-container input"><form name="form"><input type="text" name="textview" readonly></form></div>
+        <div class="item-container clean" onclick="clean()">C</div> 
+        <div class="item-container back" onclick="back()">&larr;</div>
+        <div class="item-container" onclick="insert('+')">+</div>
+        <div class="item-container" onclick="insert('-')">-</div>
+        <div class="item-container" onclick="insert('*')">&times;</div>
+        <div class="item-container" onclick="insert('/')">&divide;</div>
+        <div class="item-container" onclick="insert('7')">7</div>
+        <div class="item-container" onclick="insert('8')">8</div>
+        <div class="item-container" onclick="insert('9')">9</div>
+        <div class="item-container" onclick="insert('(')">(</div>
+        <div class="item-container" onclick="insert('4')">4</div>
+        <div class="item-container" onclick="insert('5')">5</div>
+        <div class="item-container" onclick="insert('6')">6</div>
+        <div class="item-container" onclick="insert(')')">)</div>
+        <div class="item-container" onclick="insert('1')">1</div>
+        <div class="item-container" onclick="insert('2')">2</div>
+        <div class="item-container" onclick="insert('3')">3</div>
+        <div class="item-container equal" onclick="equal()">=</div>
+        <div class="item-container zero">0</div>
+        <div class="item-container" onclick="insert('.')">.</div>
+    </div>
+    <script>
+        let array = [];
+        function insert(num){
+            document.form.textview.value =
+            document.form.textview.value + num;
+        }
+        function clean(){
+            document.form.textview.value = "";
+        }
+        function back(){
+            var back = document.form.textview.value;
+            document.form.textview.value = back.substring(0,back.length-1);
+        }
+        function equal(){
+            var equal = document.form.textview.value;
+            if(equal){
+                document.form.textview.value = eval(equal);
+            }
+            array.push(equal);
+            console.log(array);
+            console.log(eval(equal));
+            
+        }
+    </script>
+</body>
+</html>
