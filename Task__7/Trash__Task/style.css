@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(140, 53, 240);
+}
+
+.trash-place {
+  position: relative;
+}
+
+.trash-can {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  width: 60px;
+}
+.trash-can img {
+  max-width: 60px;
+}
+.trash-bag {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
